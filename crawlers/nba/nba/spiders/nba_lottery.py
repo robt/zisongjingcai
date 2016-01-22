@@ -20,7 +20,7 @@ class NbaLotterySpider(BaseSpider):
 
     def parse(self, response):
         sel = Selector(response)
-        trs = sel.xpath('//*[@id="bd"]/div[3]/div[2]/div[2]/div/div/table/tbody/tr[position()>1]')
+        trs = sel.xpath('//*[@id="bd"]/div[2]/div[2]/div[2]/div/div/table/tbody/tr[position()>1]')
         url = response.url
         spices = url.split('_')
         year = spices[1]
